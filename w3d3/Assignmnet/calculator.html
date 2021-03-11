@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+ 
+   <title>Calculate two numbers</title>
+ 
+</head>
+ 
+<body>
+ 
+    <h3>Calculator</h3>
+ 
+    <br/>
+   <p>First Value</p>
+   <input type="text" id="num1" /><br /><br />
+ 
+   <p>Second Value</p>
+   <input type="text" id="num2" /><br /><br />
+ 
+   <span> Operations: </span>
+ 
+   <br/>
+   <button onclick="calcA();">+</button>
+   <button onclick="calcM();">-</button>
+   <button onclick="calcMu();">X</button>
+   <br/>
+ 
+   <h4> Result: </h4>
+   <input type="text" id="result" />
+ 
+   <br/>
+
+
+
+ 
+   <script>
+ 
+      function calcM() {
+         let num1 = parseFloat(document.getElementById('num1').value);
+         let num2 = parseFloat(document.getElementById('num2').value);
+         document.getElementById("num1").value = "";
+         document.getElementById("num2").value = "";
+ 
+         {
+            document.getElementById('result').value = num1 - num2;
+         }
+ 
+      }
+      function calcMu() {
+         let num1 = parseFloat(document.getElementById('num1').value);
+         let num2 = parseFloat(document.getElementById('num2').value);
+         document.getElementById("num1").value = "";
+         document.getElementById("num2").value = "";
+ 
+         {
+            document.getElementById('result').value = num1 * num2;
+         }
+ 
+      }
+      function calcA() {
+         let num1 = parseFloat(document.getElementById('num1').value);
+         let num2 = parseFloat(document.getElementById('num2').value);
+         document.getElementById("num1").value = "";
+         document.getElementById("num2").value = "";
+ 
+         {
+            document.getElementById('result').value = num1 + num2;
+         }
+ 
+      }
+ 
+   </script>
+
+
+ 
+</body>
+<br/>
+ 
+</html>

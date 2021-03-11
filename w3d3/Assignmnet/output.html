@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+        <meta charset="utt-8" />
+        
+
+        <body>
+    
+        <label for="input">Input:</label><br>
+        <input type="text" id="input" name="input"><br>
+        <br>
+        <lable for="output">Output:</lable><br>
+        <input type="text" id="output" /><br>
+        <br> 
+        <button onclick= "button()">See Output</button> 
+        <script>
+            function button(){
+                let x = document.getElementById("input").value;
+                {
+                    document.getElementById("output").value = x;
+                    document.getElementById("input").value = "";
+                }
+            }
+        </script>
+    </body>
+</html>
