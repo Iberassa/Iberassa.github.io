@@ -1,7 +1,10 @@
 
-body {
+div {
     background-color: rgb(23, 19, 21);
-    border-radius: 10px;
+    margin: 2px;
+    padding: 70px;
+    border: 10px;
+
 }
 p{
     color: bisque;
