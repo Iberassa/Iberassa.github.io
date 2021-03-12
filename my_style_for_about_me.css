@@ -1,0 +1,16 @@
+
+body {
+    background-color: rgb(23, 19, 21);
+    border-radius: 10px;
+}
+p{
+    color: bisque;
+    border: 5px brown hsl(0, 20%, 30%);
+}
+pre{
+    color: bisque
+}
+
+h1,h2,h3{
+    color: azure;
+}
