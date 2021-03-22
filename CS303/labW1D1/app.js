@@ -3,7 +3,7 @@
 "use strict";
 
 function pow(x, n) {
-	return x * n;
+	return Math.pow(x,n);
 }
 
 function add2(n1, n2) {
@@ -30,6 +30,21 @@ function add(...args) {
 	0 - 59   NC
 */
 function computeGrade(grades) {
-	return "???";
+	let totalGrade=0
+	for (let grade of grades){
+		totalGrade += grade
+	}
+	let avgGrade = totalGrade/grades.length
+	if (avgGrade>=90){
+		return "A";
+	} else if (avgGrade >= 80){
+		return "B";
+	} else if (avgGrade>= 70){
+		return "C";
+	} else if (avgGrade >= 60){
+		return "D"
+	} else if (avgGrade >= 0){
+		return "NC"
+	}else 
+	return "Enter valid grades.";
 }
-
