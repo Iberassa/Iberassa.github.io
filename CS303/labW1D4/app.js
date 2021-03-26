@@ -6,14 +6,14 @@
 function removeEvenCharacters(string) {
 	let evenString = "";
 	if (string === undefined) {
-		return "missing argument"
+		return "missing argument";
 	} else
 		if (typeof (string) !== "string") {
-			return "argument not string"
+			return "argument not string";
 		}
 	for (let i = 0; i < string.length; i++) {
 		if (i % 2 !== 0) {
-			evenString += string[i]
+			evenString += string[i];
 		}
 	}
 	return evenString;
@@ -25,13 +25,13 @@ function sumPositiveNumbers(array) {
 	let positiveArray = [];
 	for (let element of array) {
 		if (element > 0) {
-			positiveArray.push(element)
+			positiveArray.push(element);
 		}
 	}
 	if (positiveArray.length === 0) {
 		return 0;
 	}
-	return positiveArray.reduce((a, b) => a + b)
+	return positiveArray.reduce((a, b) => a + b);
 }
 // Write a construction function
 // Input an array containing numbers and string, e.g. [1, "a", "c", 2, 4]
@@ -51,10 +51,10 @@ function ArrayDemo(array) {
 function makePositive(array) {
 	for (let i = 0; i < array.length; i++) {
 		if (array[i] < 0) {
-			array[i] = Math.abs(array[i])
+			array[i] = Math.abs(array[i]);
 		}
 	}
-	return array
+	return array;
 }
 // Replaces sequences of 0s with an "*", e.g.
 // removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]) returns [3, "*", 5, "*", 7, "*"];
@@ -66,14 +66,14 @@ function removeZeros(array) {
 			if (array[j] !== 0) {
 				break;
 			} else {
-				count++
-				index = j
+				count++;
+				index = j;
 			}
 		}
 		if (array[i] === 0) {
 			array.splice(index - count + 1, count, "*");
 			console.log(array);
-			count=0
+			count=0;
 		}
 	}
 	return array;
