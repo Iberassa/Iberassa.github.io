@@ -14,10 +14,10 @@ let user = {
 		console.log(`${this.name} failed to log in`);
 	},
 };
-//askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
-//askPassword(function(){user.loginOk()}, function(){(user.loginFail())});
-//askPassword(()=>user.loginOk.call(user), ()=>user.loginFail.call(user));
-//askPassword(() => user.loginOk.apply(user), () => user.loginFail.apply(user));
+askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+askPassword(function(){user.loginOk()}, function(){(user.loginFail())});
+askPassword(()=>user.loginOk.call(user), ()=>user.loginFail.call(user));
+askPassword(() => user.loginOk.apply(user), () => user.loginFail.apply(user));
 
 //2: Partial application for login (do with bind, wrapper, call, and apply)
 let user2 = {
@@ -27,10 +27,10 @@ let user2 = {
 	}
 };
 
-//askPassword(user2.login.bind(user2,true),user2.login.bind(user2,false));
-//askPassword(function(){user2.login(true)},function(){user2.login(false)});
-//askPassword(()=>user2.login.call(user2,true),()=>user2.login.call(user2,false));
-//askPassword(()=>user2.login.apply(user2, [true]), ()=>user2.login.apply(user2, [false]));
+askPassword(user2.login.bind(user2,true),user2.login.bind(user2,false));
+askPassword(function(){user2.login(true)},function(){user2.login(false)});
+askPassword(()=>user2.login.call(user2,true),()=>user2.login.call(user2,false));
+askPassword(()=>user2.login.apply(user2, [true]), ()=>user2.login.apply(user2, [false]));
 
 // 3: Fix the code below using bind
 let group = {
