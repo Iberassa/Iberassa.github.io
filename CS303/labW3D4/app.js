@@ -13,7 +13,7 @@ let student = {
 	lastName: "",
 	grades: [],
 	inputGrade: function (x, y, z) {
-		this.grades=[];
+		this.grades = [];
 		this.grades.push(x, y, z);
 		return this.grades;
 	},
@@ -83,3 +83,20 @@ console.log(averageStudentsGrade);
 
 /* 3: Add a new method named sort() without parameters in built-in constructor function Array.
 It’ll sort all elements in the array in ascending order*/
+Array.prototype.sort = function () {
+	let temp = 0;
+	for (let i = 0; i < this.length; i++) {
+		for (let j = i + 1; j <= i + 1; j++) {
+			if (this[i] > this[j]) {
+				temp = this[i];
+				this[i] = this[j];
+				this[j] = temp;
+				i = -1;
+			}
+		}
+	}
+	return this;
+}
+
+let arra = [300, 5, 2, 9, -180, 1];
+console.log(arra.sort())
